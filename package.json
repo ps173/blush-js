@@ -1,0 +1,21 @@
+{
+  "name": "blush-js",
+  "version": "1.0.1",
+  "description": "simple CLI to generate boiler plate code",
+  "main": "blush.js",
+  "dependencies": {
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  },
+  "bin": {
+    "blush": "./blush.js"
+  },
+  "scripts": {
+    "blush": "node blush.js"
+  },
+  "author": "ps173",
+  "license": "MIT"
+}
