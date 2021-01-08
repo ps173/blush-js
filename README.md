@@ -9,6 +9,7 @@ Initially I wanted to make only css but well then I thoughts let's do html too.
 made out of personal interest only.)
 
 ## Installation
+(Not published yet)
 
     npm i -g blush-js
 
