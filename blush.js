@@ -1,13 +1,23 @@
 #! /usr/bin/env node
 
 const os = require('os')
+const fs = require('fs')
+const shell = require("shelljs")
 const path = require('path');
 const inquirer = require("inquirer")
 const figlet = require("figlet")
 const generator = require('./generator.js')
-const folderpath = path.join(path.sep,'usr','local','node_modules','blush-js')
+const folderpath = path.join(path.sep,os.homedir(),'blush-js')
 
 //TODO: ADD SHELLJS AND GIT CLONE IF FILE DOES NOT EXIST!!
+//
+if (fs.existsSync(folderpath)){
+  blush();
+}
+else{
+  shell.exec(`git clone https://github.com/ps173/blush-js.git ${folderpath}`)
+  blush();
+}
 
 const question = [
   {
@@ -38,23 +48,20 @@ const question = [
 ]
 
 
-
-
-console.clear();
-
+function blush(){
 //Ascii art
-figlet("BLUSH-JS",(err,data)=>{
-  if(err){
-    console.log("some error")
-  }
-  else{
-    console.log(data)
+  figlet("BLUSH-JS",(err,data)=>{
+    if(err){
+      console.log("some error")
+    }
+    else{
+      console.log(data)
     // generate css and html accordingly
-    inquirer.prompt(question).then(({files})=>{
-      generator.generateFiles("css",folderpath,files)
-      generator.generateFiles("html",folderpath,files)
+      inquirer.prompt(question).then(({files})=>{
+        generator.generateFiles("css",folderpath,files)
+        generator.generateFiles("html",folderpath,files)
+      })
+     }
     })
 
-  }
-})
-
+}
