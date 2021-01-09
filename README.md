@@ -25,11 +25,15 @@ After the above command you will see a this:
 
 That's it select the things you want in your project and the code will be generated in the current directory..
 
+### Supported files
+
+- HTML + CSS
 
 ### Upcoming stuff
 
-- [ ] Responsive design
 - [ ] A better cli
-- [ ] Framework Specific generator
+- [ ] Responsive design
+- [ ] Library Specific generator
+- [ ] JSX 
 
 

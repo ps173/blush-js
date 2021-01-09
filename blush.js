@@ -9,8 +9,7 @@ const figlet = require("figlet")
 const generator = require('./generator.js')
 const folderpath = path.join(path.sep,os.homedir(),'blush-js')
 
-//TODO: ADD SHELLJS AND GIT CLONE IF FILE DOES NOT EXIST!!
-//
+//Clones source code in homedir
 if (fs.existsSync(folderpath)){
   blush();
 }
