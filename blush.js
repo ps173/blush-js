@@ -7,7 +7,7 @@ const path = require('path');
 const inquirer = require("inquirer")
 const figlet = require("figlet")
 const generator = require('./generator.js')
-const folderpath = path.join(path.sep,os.homedir(),'blush-js')
+const folderpath = path.join(os.homedir(),'blush-js')
 
 //Clones source code in homedir
 if (fs.existsSync(folderpath)){
