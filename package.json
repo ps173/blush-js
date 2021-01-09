@@ -1,6 +1,6 @@
 {
   "name": "blush-js",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "simple CLI to generate boiler plate code",
   "main": "blush.js",
   "dependencies": {
