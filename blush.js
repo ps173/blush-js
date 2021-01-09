@@ -7,6 +7,7 @@ const path = require('path');
 const inquirer = require("inquirer")
 const figlet = require("figlet")
 const generator = require('./generator.js')
+const currentFolder = path.join('.')
 const folderpath = path.join(os.homedir(),'blush-js')
 
 //Clones source code in homedir
@@ -57,8 +58,8 @@ function blush(){
       console.log(data)
     // generate css and html accordingly
       inquirer.prompt(question).then(({files})=>{
-        generator.generateFiles("css",folderpath,files)
-        generator.generateFiles("html",folderpath,files)
+        generator.generateFiles("css",currentFolder,files)
+        generator.generateFiles("html",currentFolder,files)
       })
      }
     })
