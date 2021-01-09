@@ -37,7 +37,7 @@ exports.generateFiles = (type,folderPath,array)=>{
          const cssfiles = fs.readFileSync(path.join(path.sep,`${folderPath}`,`blush-css`,`${elem}.css`),`utf8`)
          basecont +=`\n${cssfiles}\n`
         })
-         fs.writeFileSync(`./style.css`,`${basecont}`)
+         fs.writeFileSync(`style.css`,`${basecont}`)
         console.log('css was generated at ./style.css')
     }
     else{
@@ -46,7 +46,7 @@ exports.generateFiles = (type,folderPath,array)=>{
          const htmlfiles = fs.readFileSync(path.join(path.sep,`${folderPath}`,`blush-html`,`${elem}.html`),`utf8`)
          basecont +=`\n${htmlfiles}\n`
         })
-         fs.writeFileSync(`./index.html`,`${startHTML}\n${basecont}\n${closingHTML}`)
+         fs.writeFileSync(`index.html`,`${startHTML}\n${basecont}\n${closingHTML}`)
         console.log('html was generated at ./index.html')
     }
 }
